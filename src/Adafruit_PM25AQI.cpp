@@ -99,7 +99,7 @@ bool Adafruit_PM25AQI::read(PM25_AQI_Data *data) {
     if (serial_dev->available() < 32) {
       return false;
     }
-    serial_dev->readBytes(buffer, 32);
+    serial_dev->readBytes((char*)buffer, 32);
   } else {
     return false;
   }
